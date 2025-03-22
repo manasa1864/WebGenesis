@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>www.visionvault.com</title>
+</head>
+<style>
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 20px;
+  padding: 10px;
+  background: linear-gradient(145deg, #ff9a9e, #fad0c4, #fad0c4);
+  color: #fffff0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(145deg, #ff9a9e, #fad0c4, #f8c8c4);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fffff0;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sidebar a:hover {
+  background-color: #fad0c4;
+}
+
+.sub-sidebar {
+  display: none;
+  padding-left: 40px;
+  background: linear-gradient(145deg, #f8b8b4, #f8d8d4, #fad0c4);
+}
+
+.sidebar a:hover + .sub-sidebar,
+.sub-sidebar:hover {
+  display: block;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ff9a9e;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+#sidebar-toggle {
+  display: none;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+  width: 250px;
+}
+
+#sidebar-toggle:checked ~ #main {
+  margin-left: 250px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle">
+<h1><label for="sidebar-toggle" class="openbtn">☰ More Information</label></h1>
+
+<div class="sidebar">
+  <label for="sidebar-toggle" class="closebtn">×</label>
+  <h1><a href="#">Exhibitions</a>
+  <div class="sub-sidebar">
+    <a href="#">Jewellery Exhibition</a>
+    <a href="#">Painting Exhibition</a>
+    <a href="#">Popular Exhibitions</a>
+    <a href="#">Current Exhibitions</a>
+    <a href="#">Future Exhibitions</a>
+  </div>
+  <a href="#">Shop</a>
+  <div class="sub-sidebar">
+    <a href="#">Art Prints</a>
+    <a href="#">Photographs</a>
+    <a href="#">Paintings</a>
+    <a href="#">Merchandise</a>
+  </div>
+  <a href="#">Portfolio</a>
+  <div class="sub-sidebar">
+    <a href="#">Fine Art Portfolio</a>
+    <a href="#">Photography Portfolio</a>
+    <a href="#">Graphic Design Portfolio</a>
+    <a href="#">Digital Art Portfolio</a>
+    <a href="#">Fashion Design Portfolio</a>
+  </div>
+  <a href="#">Studio</a>
+  <div class="sub-sidebar">
+    <a href="#">Fine Art Studio</a>
+    <a href="#">Photography Studio</a>
+    <a href="#">Graphic Design Studio</a>
+    <a href="#">Animation Studio</a>
+    <a href="#">Fashion Design Studio</a>
+    <a href="#">Tattoo Studio</a>
+    <a href="#">Ceramic & Pottery Studio</a>
+    <a href="#">Music & Sound Studio</a>
+    <a href="#">Printmaking Studio</a>
+    <a href="#">Concept Art Studio</a></h1>
+  </div>
+</div>
+
+<div id="main">
+  <h2>Welcome to VisionVault</h2>
+  <h3>A place where your mind runs free, unbound and wild with creativity, alive with endless possibilities.</h3>
+</div>
+
+</body>
+</html>
